@@ -1,0 +1,129 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Perguntas Frequentes (FAQ) — Drogaria Chaves</title>
+<meta name="description" content="Tire suas dúvidas sobre delivery, produtos, receitas médicas e horário de funcionamento da Drogaria Chaves.">
+<link rel="icon" href="assets/logo.png" type="image/png">
+<link rel="stylesheet" href="style.css">
+</head>
+<body>
+
+<header class="site-header">
+  <div class="header-inner">
+    <a href="index.html" class="brand">
+      <img src="assets/logo.png" alt="Logotipo da Drogaria Chaves">
+      <span class="brand-text">Drogaria <span>Chaves</span></span>
+    </a>
+    <button class="nav-toggle" aria-label="Abrir menu de navegação" aria-expanded="false" id="navToggle">
+      <span></span>
+    </button>
+    <nav class="main-nav" id="mainNav">
+      <ul>
+        <li><a href="index.html">Início</a></li>
+        <li><a href="quem-somos.html">Quem Somos</a></li>
+        <li><a href="atendimento.html">Atendimento / Redes Sociais</a></li>
+        <li><a href="faq.html" class="active">Perguntas Frequentes</a></li>
+      </ul>
+    </nav>
+  </div>
+</header>
+
+<main>
+
+  <div class="page-title">
+    <span class="eyebrow">Dúvidas comuns</span>
+    <h1>Perguntas Frequentes (FAQ)</h1>
+  </div>
+
+  <section class="section">
+    <div class="faq-list">
+
+      <div class="faq-item">
+        <button class="faq-question" aria-expanded="false">
+          Serviço de delivery
+          <span class="icon">+</span>
+        </button>
+        <div class="faq-answer">
+          <p>Entregamos na região do Santa Terezinha.</p>
+        </div>
+      </div>
+
+      <div class="faq-item">
+        <button class="faq-question" aria-expanded="false">
+          Produtos comercializados
+          <span class="icon">+</span>
+        </button>
+        <div class="faq-answer">
+          <p>Alta variedade, desde cosméticos a medicamentos.</p>
+        </div>
+      </div>
+
+      <div class="faq-item">
+        <button class="faq-question" aria-expanded="false">
+          Qualquer remédio pode ser adquirido?
+          <span class="icon">+</span>
+        </button>
+        <div class="faq-answer">
+          <p>Determinados remédios só são comercializados mediante receitas e laudos médicos oficiais.</p>
+        </div>
+      </div>
+
+      <div class="faq-item">
+        <button class="faq-question" aria-expanded="false">
+          Quando funcionamos?
+          <span class="icon">+</span>
+        </button>
+        <div class="faq-answer">
+          <p>De segunda a sábado das 08:00 às 20:30, nos domingos das 08:00 às 13:00.</p>
+        </div>
+      </div>
+
+    </div>
+  </section>
+
+</main>
+
+<footer class="site-footer">
+  <div class="footer-inner">
+    <div class="footer-brand">Drogaria <span>Chaves</span></div>
+    <div class="footer-info">
+      <p>R. Julita Nogueira Soares, 950 — Santa Terezinha, Belo Horizonte - MG, 31365-250</p>
+      <p>Telefone: (31) 3476-4138</p>
+    </div>
+  </div>
+  <div class="footer-bottom">© Drogaria Chaves — Cuidando do Santa Terezinha há mais de 20 anos.</div>
+</footer>
+
+<script>
+  const navToggle = document.getElementById('navToggle');
+  const mainNav = document.getElementById('mainNav');
+  navToggle.addEventListener('click', () => {
+    const isOpen = mainNav.classList.toggle('open');
+    navToggle.setAttribute('aria-expanded', isOpen);
+  });
+
+  // Acordeão do FAQ: cada pergunta abre/fecha sua própria resposta
+  document.querySelectorAll('.faq-item').forEach((item) => {
+    const question = item.querySelector('.faq-question');
+    const answer = item.querySelector('.faq-answer');
+
+    question.addEventListener('click', () => {
+      const isOpen = item.classList.contains('open');
+
+      if (isOpen) {
+        item.classList.remove('open');
+        question.setAttribute('aria-expanded', 'false');
+        answer.style.maxHeight = null;
+      } else {
+        item.classList.add('open');
+        question.setAttribute('aria-expanded', 'true');
+        answer.style.maxHeight = answer.scrollHeight + 'px';
+      }
+    });
+  });
+</script>
+
+</body>
+</html>

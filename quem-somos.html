@@ -1,0 +1,111 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Quem Somos — Drogaria Chaves</title>
+<meta name="description" content="Conheça a história da Drogaria Chaves, farmácia de bairro no Santa Terezinha, Belo Horizonte, há mais de 20 anos.">
+<link rel="icon" href="assets/logo.png" type="image/png">
+<link rel="stylesheet" href="style.css">
+</head>
+<body>
+
+<header class="site-header">
+  <div class="header-inner">
+    <a href="index.html" class="brand">
+      <img src="assets/logo.png" alt="Logotipo da Drogaria Chaves">
+      <span class="brand-text">Drogaria <span>Chaves</span></span>
+    </a>
+    <button class="nav-toggle" aria-label="Abrir menu de navegação" aria-expanded="false" id="navToggle">
+      <span></span>
+    </button>
+    <nav class="main-nav" id="mainNav">
+      <ul>
+        <li><a href="index.html">Início</a></li>
+        <li><a href="quem-somos.html" class="active">Quem Somos</a></li>
+        <li><a href="atendimento.html">Atendimento / Redes Sociais</a></li>
+        <li><a href="faq.html">Perguntas Frequentes</a></li>
+      </ul>
+    </nav>
+  </div>
+</header>
+
+<main>
+
+  <div class="page-title">
+    <span class="eyebrow">Nossa história</span>
+    <h1>Quem Somos</h1>
+  </div>
+
+  <section class="section">
+    <div class="card">
+      <p class="about-text">
+        A mais de 20 anos, a Drogaria e Farmácia do Chaves tem sido um pilar de saúde no
+        Bairro Santa Terezinha em Belo Horizonte. Com um compromisso comunitário, nossa
+        farmácia se estabeleceu como um local confiável para aqueles que procuram
+        medicamentos de qualidade, atendimento personalizado e uma ampla gama de produtos.
+      </p>
+      <p class="about-text">
+        Com uma equipe de colaboradores experientes e prestativos, nossa farmácia se tornou
+        um lugar onde os moradores do bairro podem contar com conselhos confiáveis e
+        orientações sobre seus tratamentos médicos. Além disso, oferecemos uma seleção de
+        produtos de beleza e cuidados pessoais, para atender às necessidades dos clientes
+        que buscam qualidade para aprimorar sua aparência e bem-estar.
+      </p>
+      <p class="about-text">
+        Oferecemos entregas em toda a região.
+      </p>
+
+      <div class="about-highlights">
+        <div class="highlight">
+          <strong>20+ anos</strong>
+          <span>de cuidado com o Santa Terezinha</span>
+        </div>
+        <div class="highlight">
+          <strong>Entrega</strong>
+          <span>em toda a região</span>
+        </div>
+        <div class="highlight">
+          <strong>Atendimento</strong>
+          <span>próximo e personalizado</span>
+        </div>
+      </div>
+    </div>
+
+    <div class="quad-divider" aria-hidden="true">
+      <div class="quad"><i></i><i></i><i></i><i></i></div>
+    </div>
+
+    <div class="card">
+      <h2 style="color:var(--purple);">Onde estamos</h2>
+      <p class="about-text" style="margin-bottom:0;">
+        R. Julita Nogueira Soares, 950 — Santa Terezinha, Belo Horizonte - MG, 31365-250<br>
+        Telefone: (31) 3476-4138
+      </p>
+    </div>
+  </section>
+
+</main>
+
+<footer class="site-footer">
+  <div class="footer-inner">
+    <div class="footer-brand">Drogaria <span>Chaves</span></div>
+    <div class="footer-info">
+      <p>R. Julita Nogueira Soares, 950 — Santa Terezinha, Belo Horizonte - MG, 31365-250</p>
+      <p>Telefone: (31) 3476-4138</p>
+    </div>
+  </div>
+  <div class="footer-bottom">© Drogaria Chaves — Cuidando do Santa Terezinha há mais de 20 anos.</div>
+</footer>
+
+<script>
+  const navToggle = document.getElementById('navToggle');
+  const mainNav = document.getElementById('mainNav');
+  navToggle.addEventListener('click', () => {
+    const isOpen = mainNav.classList.toggle('open');
+    navToggle.setAttribute('aria-expanded', isOpen);
+  });
+</script>
+
+</body>
+</html>
